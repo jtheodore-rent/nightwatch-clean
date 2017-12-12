@@ -1,0 +1,13 @@
+{
+  "name": "nightwatch-clean",
+  "version": "0.0.0",
+  "description": "test project for clean install of nightwatchjs",
+  "main": "index.js",
+  "author": "John Theodore and Abdur Jubair",
+  "license": "MIT",
+  "devDependencies": {
+    "dirty-chai": "2.0.1",
+    "nightwatch": "0.9.19",
+    "saucelabs": "1.4.0"
+  }
+}

@@ -1,0 +1,2113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Nightwatch HTML Report - Default Theme</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <style type="text/css">body{
+  margin: 10px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 0.8em;
+}
+
+h2{
+  font-size: 1.2em;
+  margin: 0;
+  padding: 0;
+}
+h3{
+  font-size: 1em;
+  margin: 0;
+  padding: 0;
+}
+
+.toggleSuccess, .toggleError{
+  margin-right: 10px;
+}
+
+.errmessages{
+  background-color: rgba(238, 64, 64, 0.43);
+  border: 1px solid rgba(235, 28, 28, 0.78);
+  padding: 5px;
+}
+
+.errmessages h2{
+  margin: 5px 0;
+  font-size: 1em;
+}
+
+.errmessages .errors{
+  display: none;
+}
+
+.suites {
+  margin: 0 0 0 30px;
+}
+
+.package {
+  margin: 15px 0;
+}
+.package > .name {
+  cursor: pointer;
+}
+
+.suite {
+  margin: 15px 0;
+}
+
+.suite > .name {
+  cursor: pointer;
+}
+
+ul{
+  list-style: none;
+}
+
+.testcases {
+}
+
+.status{
+  display: inline-block;
+}
+
+.testcase .name {
+  display: inline-block;
+}
+
+.success{
+  color: rgb(56, 142, 56);
+}
+.testcase img{
+  max-width: 80%;
+}
+.package.error > .name{
+  color: rgb(178, 43, 43);
+}
+.suite.error > .name{
+  color: rgb(178, 43, 43);
+}
+
+.testcase.success .name{
+  color: rgb(56, 142, 56);
+}
+.testcase.error .status{
+  color: rgb(178, 43, 43);
+}
+    </style>
+    <script type="text/javascript">$(document).ready(function() {
+  $('.package>.name').click(function() {
+    $(this).siblings('.suites').slideToggle();
+  });
+
+  $('.suites, .errmessages, .testcases').hide();
+
+  $('.suite, .errmessages').click(function() {
+    var $elem = $(this);
+    $elem.children('.testcases, .errors').slideToggle();
+  });
+  $('.toggleSuccess').click(function() {
+    $('.package.success').slideToggle();
+  });
+  $('.toggleError').click(function() {
+    $('.package.error').slideToggle();
+  });
+});
+
+    </script>
+  </head>
+  <body>
+    <h1>Nightwatch Results</h1>
+    <div id="container"><a href="#" class="toggleSuccess">Show/Hide Successes</a>
+      <div class="package success">
+        <h2 class="name">&#10003; large/static/contactUs</h2>
+        <div class="suites">
+          <div class="suite success">
+            <h3 class="name">Validate URL</h3>
+            <ul class="testcases">
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Element &lt;#react-view&gt; was visible after 50 milliseconds.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the URL equals &quot;http://localhost:9450/contact-us/&quot;.</div>
+              </li>
+            </ul>
+          </div>
+          <div class="suite success">
+            <h3 class="name">Validate header</h3>
+            <ul class="testcases">
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=ag-logo]&gt; to have attribute &quot;href&quot; equal: &quot;http://localhost:9450/&quot; - condition was met in 28ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=logo],Element[name=@image]&gt; to be present - element was present in 29ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=mainNavigation],Element[name=@findApartmentsMenu]&gt; text to match: &quot;/Find Apartments/&quot; - condition was met in 56ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=mainNavigation],Element[name=@blogLink]&gt; text to equal: &quot;Blog&quot; - condition was met in 66ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=mainNavigation],Element[name=@getOurAppLink]&gt; text to equal: &quot;Get Our App&quot; - condition was met in 114ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=mainNavigation],Element[name=@nextStepsMenu]&gt; text to equal: &quot;Next Steps&quot; - condition was met in 60ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=mainNavigation],Element[name=@advertiseLink]&gt; text to equal: &quot;Advertise Your Property&quot; - condition was met in 55ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=utilityNavigation],Element[name=@myPlacesLink]&gt; text to equal: &quot;My Places&quot; - condition was met in 49ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=utilityNavigation],Element[name=@registerLink]&gt; text to equal: &quot;Register&quot; - condition was met in 43ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=utilityNavigation],Element[name=@logInLink]&gt; text to equal: &quot;Log In&quot; - condition was met in 40ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=searchBar],Element[name=@textInput]&gt; to have attribute &quot;placeholder&quot; equal: &quot;Neighborhood, Zip or City&quot; - condition was met in 49ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=searchBar],Element[name=@bedsDropdown]&gt; text to equal: &quot;BEDS&quot; - condition was met in 42ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=searchBar],Element[name=@priceDropdown]&gt; text to equal: &quot;PRICE&quot; - condition was met in 41ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=searchBar],Element[name=@searchButton]&gt; text to equal: &quot;Search Apartments&quot; - condition was met in 42ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=searchBar],Element[name=@mapListViewToggle]&gt; to not be present - element was not found in 25ms.</div>
+              </li>
+            </ul>
+          </div>
+          <div class="suite success">
+            <h3 class="name">Validate page content</h3>
+            <ul class="testcases">
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the element text exists.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the element text exists.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the element text exists.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=contact-address]&gt; text to contain: &quot;RentPath, LLC&quot; - condition was met in 25ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=contact-address]&gt; text to contain: &quot;950 E. Paces Ferry Road NE&quot; - condition was met in 20ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=contact-address]&gt; text to contain: &quot;Suite 2600&quot; - condition was met in 16ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=contact-address]&gt; text to contain: &quot;Atlanta, GA 30326&quot; - condition was met in 18ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=contact-address]&gt; text to contain: &quot;Phone:678.421.3000&quot; - condition was met in 17ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=contact-address]&gt; text to contain: &quot;Toll Free:800.216.1423&quot; - condition was met in 16ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=contact-phone]&gt; text to equal: &quot;678.421.3000&quot; - condition was met in 32ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=contact-phonetf]&gt; text to equal: &quot;800.216.1423&quot; - condition was met in 31ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=contact-phonesales]&gt; text to equal: &quot;877.394.9599&quot; - condition was met in 31ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=contact-emailsales]&gt; text to equal: &quot;sales@rentpath.com&quot; - condition was met in 31ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=contact-phonepr]&gt; text to equal: &quot;678.421.3000&quot; - condition was met in 30ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=contact-emailpr]&gt; text to equal: &quot;pr@rentpath.com&quot; - condition was met in 30ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=contact-mapimg]&gt; to be present - element was present in 15ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=contact-mapimg]&gt; to have attribute &quot;src&quot; - attribute was present in 24ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=contact-mapimg]&gt; to be visible - condition was met in 25ms</div>
+              </li>
+            </ul>
+          </div>
+          <div class="suite success">
+            <h3 class="name">Validate footer</h3>
+            <ul class="testcases">
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=footer-blog-link]&gt; text to equal: &quot;AG Blog&quot; - condition was met in 31ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=footer-mobile-apps-link]&gt; text to equal: &quot;Mobile Apps&quot; - condition was met in 31ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=footer-site-map-link]&gt; text to equal: &quot;Site Map&quot; - condition was met in 30ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=footer-about-us-link]&gt; text to equal: &quot;About Us&quot; - condition was met in 39ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=footer-employment-link]&gt; text to equal: &quot;Employment&quot; - condition was met in 32ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=footer-ads-link]&gt; text to equal: &quot;Interest-Based Ads&quot; - condition was met in 30ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=footer-advertise-link]&gt; text to equal: &quot;Advertise&quot; - condition was met in 31ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=footer-privacy-link]&gt; text to equal: &quot;Privacy Policy&quot; - condition was met in 29ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=footer-terms-link]&gt; text to equal: &quot;Terms of Service&quot; - condition was met in 30ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=footer-contact-link]&gt; text to equal: &quot;Contact Us&quot; - condition was met in 41ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=footer-scams-link]&gt; text to equal: &quot;Avoid Scams&quot; - condition was met in 28ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=property-manager-login]&gt; text to equal: &quot;Property Manager Login&quot; - condition was met in 29ms</div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="package success">
+        <h2 class="name">&#10003; large/static/corporate</h2>
+        <div class="suites">
+          <div class="suite success">
+            <h3 class="name">Validate URL</h3>
+            <ul class="testcases">
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Element &lt;#react-view&gt; was visible after 29 milliseconds.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the URL equals &quot;http://localhost:9450/corporate/&quot;.</div>
+              </li>
+            </ul>
+          </div>
+          <div class="suite success">
+            <h3 class="name">Validate header</h3>
+            <ul class="testcases">
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=ag-logo]&gt; to have attribute &quot;href&quot; equal: &quot;http://localhost:9450/&quot; - condition was met in 44ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=logo],Element[name=@image]&gt; to be present - element was present in 23ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=mainNavigation],Element[name=@findApartmentsMenu]&gt; text to match: &quot;/Find Apartments/&quot; - condition was met in 44ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=mainNavigation],Element[name=@blogLink]&gt; text to equal: &quot;Blog&quot; - condition was met in 49ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=mainNavigation],Element[name=@getOurAppLink]&gt; text to equal: &quot;Get Our App&quot; - condition was met in 59ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=mainNavigation],Element[name=@nextStepsMenu]&gt; text to equal: &quot;Next Steps&quot; - condition was met in 134ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=mainNavigation],Element[name=@advertiseLink]&gt; text to equal: &quot;Advertise Your Property&quot; - condition was met in 85ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=utilityNavigation],Element[name=@myPlacesLink]&gt; text to equal: &quot;My Places&quot; - condition was met in 63ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=utilityNavigation],Element[name=@registerLink]&gt; text to equal: &quot;Register&quot; - condition was met in 38ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=utilityNavigation],Element[name=@logInLink]&gt; text to equal: &quot;Log In&quot; - condition was met in 36ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=searchBar],Element[name=@textInput]&gt; to have attribute &quot;placeholder&quot; equal: &quot;Neighborhood, Zip or City&quot; - condition was met in 36ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=searchBar],Element[name=@bedsDropdown]&gt; text to equal: &quot;BEDS&quot; - condition was met in 47ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=searchBar],Element[name=@priceDropdown]&gt; text to equal: &quot;PRICE&quot; - condition was met in 38ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=searchBar],Element[name=@searchButton]&gt; text to equal: &quot;Search Apartments&quot; - condition was met in 38ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=searchBar],Element[name=@mapListViewToggle]&gt; to not be present - element was not found in 21ms.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=breadcrumbs],Element[name=@root]&gt; text to equal: &quot;Home&quot; - condition was met in 45ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=breadcrumbs],Element[name=@root]&gt; to have attribute &quot;href&quot; equal: &quot;http://localhost:9450/&quot; - condition was met in 24ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=breadcrumbs],Element[name=@currentPage]&gt; text to equal: &quot;Corporate&quot; - condition was met in 36ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=breadcrumbs],Element[name=@currentPage]&gt; to not have attribute &quot;href&quot;</div>
+              </li>
+            </ul>
+          </div>
+          <div class="suite success">
+            <h3 class="name">Validate hero content</h3>
+            <ul class="testcases">
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the element text exists.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the element text exists.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=hero-image]&gt; to be present - element was present in 13ms</div>
+              </li>
+            </ul>
+          </div>
+          <div class="suite success">
+            <h3 class="name">Validate page content</h3>
+            <ul class="testcases">
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the element text exists.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the element text exists.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the element text exists.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the link href matches /apartments\/.+\/corporate-4lc/.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the link href matches /apartments\/.+\/corporate-4lc/.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the link href matches /apartments\/.+\/corporate-4lc/.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the link href matches /apartments\/.+\/corporate-4lc/.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the link href matches /apartments\/.+\/corporate-4lc/.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the link href matches /apartments\/.+\/corporate-4lc/.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the link href matches /apartments\/.+\/corporate-4lc/.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the link href matches /apartments\/.+\/corporate-4lc/.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the link href matches /apartments\/.+\/corporate-4lc/.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the link href matches /apartments\/.+\/corporate-4lc/.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the link href matches /apartments\/.+\/corporate-4lc/.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the link href matches /apartments\/.+\/corporate-4lc/.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the link href matches /apartments\/.+\/corporate-4lc/.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the link href matches /apartments\/.+\/corporate-4lc/.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the link href matches /apartments\/.+\/corporate-4lc/.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the link href matches /apartments\/.+\/corporate-4lc/.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the link href matches /apartments\/.+\/corporate-4lc/.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the link href matches /apartments\/.+\/corporate-4lc/.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the link href matches /apartments\/.+\/corporate-4lc/.</div>
+              </li>
+            </ul>
+          </div>
+          <div class="suite success">
+            <h3 class="name">Validate footer</h3>
+            <ul class="testcases">
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=footer-blog-link]&gt; text to equal: &quot;AG Blog&quot; - condition was met in 30ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=footer-mobile-apps-link]&gt; text to equal: &quot;Mobile Apps&quot; - condition was met in 28ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=footer-site-map-link]&gt; text to equal: &quot;Site Map&quot; - condition was met in 30ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=footer-about-us-link]&gt; text to equal: &quot;About Us&quot; - condition was met in 29ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=footer-employment-link]&gt; text to equal: &quot;Employment&quot; - condition was met in 29ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=footer-ads-link]&gt; text to equal: &quot;Interest-Based Ads&quot; - condition was met in 30ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=footer-advertise-link]&gt; text to equal: &quot;Advertise&quot; - condition was met in 30ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=footer-privacy-link]&gt; text to equal: &quot;Privacy Policy&quot; - condition was met in 37ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=footer-terms-link]&gt; text to equal: &quot;Terms of Service&quot; - condition was met in 30ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=footer-contact-link]&gt; text to equal: &quot;Contact Us&quot; - condition was met in 30ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=footer-scams-link]&gt; text to equal: &quot;Avoid Scams&quot; - condition was met in 30ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=property-manager-login]&gt; text to equal: &quot;Property Manager Login&quot; - condition was met in 29ms</div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="package success">
+        <h2 class="name">&#10003; large/static/doNotTrack</h2>
+        <div class="suites">
+          <div class="suite success">
+            <h3 class="name">Validate URL</h3>
+            <ul class="testcases">
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Element &lt;#react-view&gt; was visible after 38 milliseconds.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the URL equals &quot;http://localhost:9450/legal/privacy/do-not-track/&quot;.</div>
+              </li>
+            </ul>
+          </div>
+          <div class="suite success">
+            <h3 class="name">Validate header</h3>
+            <ul class="testcases">
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=ag-logo]&gt; to have attribute &quot;href&quot; equal: &quot;http://localhost:9450/&quot; - condition was met in 26ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=logo],Element[name=@image]&gt; to be present - element was present in 263ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=mainNavigation],Element[name=@findApartmentsMenu]&gt; text to match: &quot;/Find Apartments/&quot; - condition was met in 118ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=mainNavigation],Element[name=@blogLink]&gt; text to equal: &quot;Blog&quot; - condition was met in 84ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=mainNavigation],Element[name=@getOurAppLink]&gt; text to equal: &quot;Get Our App&quot; - condition was met in 38ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=mainNavigation],Element[name=@nextStepsMenu]&gt; text to equal: &quot;Next Steps&quot; - condition was met in 37ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=mainNavigation],Element[name=@advertiseLink]&gt; text to equal: &quot;Advertise Your Property&quot; - condition was met in 43ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=utilityNavigation],Element[name=@myPlacesLink]&gt; text to equal: &quot;My Places&quot; - condition was met in 45ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=utilityNavigation],Element[name=@registerLink]&gt; text to equal: &quot;Register&quot; - condition was met in 47ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=utilityNavigation],Element[name=@logInLink]&gt; text to equal: &quot;Log In&quot; - condition was met in 37ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=searchBar],Element[name=@textInput]&gt; to have attribute &quot;placeholder&quot; equal: &quot;Neighborhood, Zip or City&quot; - condition was met in 37ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=searchBar],Element[name=@bedsDropdown]&gt; text to equal: &quot;BEDS&quot; - condition was met in 37ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=searchBar],Element[name=@priceDropdown]&gt; text to equal: &quot;PRICE&quot; - condition was met in 38ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=searchBar],Element[name=@searchButton]&gt; text to equal: &quot;Search Apartments&quot; - condition was met in 38ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=searchBar],Element[name=@mapListViewToggle]&gt; to not be present - element was not found in 20ms.</div>
+              </li>
+            </ul>
+          </div>
+          <div class="suite success">
+            <h3 class="name">Validate page content</h3>
+            <ul class="testcases">
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the element text exists.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the element text exists.</div>
+              </li>
+            </ul>
+          </div>
+          <div class="suite success">
+            <h3 class="name">Validate footer</h3>
+            <ul class="testcases">
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=footer-blog-link]&gt; text to equal: &quot;AG Blog&quot; - condition was met in 29ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=footer-mobile-apps-link]&gt; text to equal: &quot;Mobile Apps&quot; - condition was met in 29ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=footer-site-map-link]&gt; text to equal: &quot;Site Map&quot; - condition was met in 29ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=footer-about-us-link]&gt; text to equal: &quot;About Us&quot; - condition was met in 30ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=footer-employment-link]&gt; text to equal: &quot;Employment&quot; - condition was met in 29ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=footer-ads-link]&gt; text to equal: &quot;Interest-Based Ads&quot; - condition was met in 30ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=footer-advertise-link]&gt; text to equal: &quot;Advertise&quot; - condition was met in 29ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=footer-privacy-link]&gt; text to equal: &quot;Privacy Policy&quot; - condition was met in 29ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=footer-terms-link]&gt; text to equal: &quot;Terms of Service&quot; - condition was met in 29ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=footer-contact-link]&gt; text to equal: &quot;Contact Us&quot; - condition was met in 30ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=footer-scams-link]&gt; text to equal: &quot;Avoid Scams&quot; - condition was met in 29ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=property-manager-login]&gt; text to equal: &quot;Property Manager Login&quot; - condition was met in 29ms</div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="package success">
+        <h2 class="name">&#10003; large/static/equalHousingOpportunity</h2>
+        <div class="suites">
+          <div class="suite success">
+            <h3 class="name">Validate URL</h3>
+            <ul class="testcases">
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Element &lt;#react-view&gt; was visible after 29 milliseconds.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the URL equals &quot;http://localhost:9450/equal-housing-opportunity/&quot;.</div>
+              </li>
+            </ul>
+          </div>
+          <div class="suite success">
+            <h3 class="name">Validate header</h3>
+            <ul class="testcases">
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=ag-logo]&gt; to have attribute &quot;href&quot; equal: &quot;http://localhost:9450/&quot; - condition was met in 33ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=logo],Element[name=@image]&gt; to be present - element was present in 22ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=mainNavigation],Element[name=@findApartmentsMenu]&gt; text to match: &quot;/Find Apartments/&quot; - condition was met in 47ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=mainNavigation],Element[name=@blogLink]&gt; text to equal: &quot;Blog&quot; - condition was met in 40ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=mainNavigation],Element[name=@getOurAppLink]&gt; text to equal: &quot;Get Our App&quot; - condition was met in 45ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=mainNavigation],Element[name=@nextStepsMenu]&gt; text to equal: &quot;Next Steps&quot; - condition was met in 104ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=mainNavigation],Element[name=@advertiseLink]&gt; text to equal: &quot;Advertise Your Property&quot; - condition was met in 97ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=utilityNavigation],Element[name=@myPlacesLink]&gt; text to equal: &quot;My Places&quot; - condition was met in 77ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=utilityNavigation],Element[name=@registerLink]&gt; text to equal: &quot;Register&quot; - condition was met in 38ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=utilityNavigation],Element[name=@logInLink]&gt; text to equal: &quot;Log In&quot; - condition was met in 35ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=searchBar],Element[name=@textInput]&gt; to have attribute &quot;placeholder&quot; equal: &quot;Neighborhood, Zip or City&quot; - condition was met in 34ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=searchBar],Element[name=@bedsDropdown]&gt; text to equal: &quot;BEDS&quot; - condition was met in 38ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=searchBar],Element[name=@priceDropdown]&gt; text to equal: &quot;PRICE&quot; - condition was met in 39ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=searchBar],Element[name=@searchButton]&gt; text to equal: &quot;Search Apartments&quot; - condition was met in 38ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=searchBar],Element[name=@mapListViewToggle]&gt; to not be present - element was not found in 20ms.</div>
+              </li>
+            </ul>
+          </div>
+          <div class="suite success">
+            <h3 class="name">Validate page content</h3>
+            <ul class="testcases">
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=eho-image]&gt; to be present - element was present in 13ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the element text exists.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the element text exists.</div>
+              </li>
+            </ul>
+          </div>
+          <div class="suite success">
+            <h3 class="name">Validate footer</h3>
+            <ul class="testcases">
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=footer-blog-link]&gt; text to equal: &quot;AG Blog&quot; - condition was met in 29ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=footer-mobile-apps-link]&gt; text to equal: &quot;Mobile Apps&quot; - condition was met in 26ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=footer-site-map-link]&gt; text to equal: &quot;Site Map&quot; - condition was met in 26ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=footer-about-us-link]&gt; text to equal: &quot;About Us&quot; - condition was met in 27ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=footer-employment-link]&gt; text to equal: &quot;Employment&quot; - condition was met in 26ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=footer-ads-link]&gt; text to equal: &quot;Interest-Based Ads&quot; - condition was met in 27ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=footer-advertise-link]&gt; text to equal: &quot;Advertise&quot; - condition was met in 26ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=footer-privacy-link]&gt; text to equal: &quot;Privacy Policy&quot; - condition was met in 27ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=footer-terms-link]&gt; text to equal: &quot;Terms of Service&quot; - condition was met in 27ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=footer-contact-link]&gt; text to equal: &quot;Contact Us&quot; - condition was met in 27ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=footer-scams-link]&gt; text to equal: &quot;Avoid Scams&quot; - condition was met in 29ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=property-manager-login]&gt; text to equal: &quot;Property Manager Login&quot; - condition was met in 28ms</div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="package success">
+        <h2 class="name">&#10003; large/static/incomeRestricted</h2>
+        <div class="suites">
+          <div class="suite success">
+            <h3 class="name">Validate URL</h3>
+            <ul class="testcases">
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Element &lt;#react-view&gt; was visible after 31 milliseconds.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the URL equals &quot;http://localhost:9450/income-restricted-apartments/&quot;.</div>
+              </li>
+            </ul>
+          </div>
+          <div class="suite success">
+            <h3 class="name">Validate header</h3>
+            <ul class="testcases">
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=ag-logo]&gt; to have attribute &quot;href&quot; equal: &quot;http://localhost:9450/&quot; - condition was met in 41ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=logo],Element[name=@image]&gt; to be present - element was present in 23ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=mainNavigation],Element[name=@findApartmentsMenu]&gt; text to match: &quot;/Find Apartments/&quot; - condition was met in 45ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=mainNavigation],Element[name=@blogLink]&gt; text to equal: &quot;Blog&quot; - condition was met in 33ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=mainNavigation],Element[name=@getOurAppLink]&gt; text to equal: &quot;Get Our App&quot; - condition was met in 49ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=mainNavigation],Element[name=@nextStepsMenu]&gt; text to equal: &quot;Next Steps&quot; - condition was met in 109ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=mainNavigation],Element[name=@advertiseLink]&gt; text to equal: &quot;Advertise Your Property&quot; - condition was met in 81ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=utilityNavigation],Element[name=@myPlacesLink]&gt; text to equal: &quot;My Places&quot; - condition was met in 69ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=utilityNavigation],Element[name=@registerLink]&gt; text to equal: &quot;Register&quot; - condition was met in 40ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=utilityNavigation],Element[name=@logInLink]&gt; text to equal: &quot;Log In&quot; - condition was met in 35ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=searchBar],Element[name=@textInput]&gt; to have attribute &quot;placeholder&quot; equal: &quot;Neighborhood, Zip or City&quot; - condition was met in 36ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=searchBar],Element[name=@bedsDropdown]&gt; text to equal: &quot;BEDS&quot; - condition was met in 39ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=searchBar],Element[name=@priceDropdown]&gt; text to equal: &quot;PRICE&quot; - condition was met in 54ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=searchBar],Element[name=@searchButton]&gt; text to equal: &quot;Search Apartments&quot; - condition was met in 36ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=searchBar],Element[name=@mapListViewToggle]&gt; to not be present - element was not found in 21ms.</div>
+              </li>
+            </ul>
+          </div>
+          <div class="suite success">
+            <h3 class="name">Validate page content</h3>
+            <ul class="testcases">
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the element text exists.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the element text exists.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the link href matches /apartments\/.+\/low-income-apartments-for-rent-4lg/.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the link href matches /apartments\/.+\/low-income-apartments-for-rent-4lg/.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the link href matches /apartments\/.+\/low-income-apartments-for-rent-4lg/.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the link href matches /apartments\/.+\/low-income-apartments-for-rent-4lg/.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the link href matches /apartments\/.+\/low-income-apartments-for-rent-4lg/.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the link href matches /apartments\/.+\/low-income-apartments-for-rent-4lg/.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the link href matches /apartments\/.+\/low-income-apartments-for-rent-4lg/.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the link href matches /apartments\/.+\/low-income-apartments-for-rent-4lg/.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the link href matches /apartments\/.+\/low-income-apartments-for-rent-4lg/.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the link href matches /apartments\/.+\/low-income-apartments-for-rent-4lg/.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the link href matches /apartments\/.+\/low-income-apartments-for-rent-4lg/.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the link href matches /apartments\/.+\/low-income-apartments-for-rent-4lg/.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the link href matches /apartments\/.+\/low-income-apartments-for-rent-4lg/.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the link href matches /apartments\/.+\/low-income-apartments-for-rent-4lg/.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the link href matches /apartments\/.+\/low-income-apartments-for-rent-4lg/.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the link href matches /apartments\/.+\/low-income-apartments-for-rent-4lg/.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the element text exists.</div>
+              </li>
+            </ul>
+          </div>
+          <div class="suite success">
+            <h3 class="name">Validate footer</h3>
+            <ul class="testcases">
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=footer-blog-link]&gt; text to equal: &quot;AG Blog&quot; - condition was met in 31ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=footer-mobile-apps-link]&gt; text to equal: &quot;Mobile Apps&quot; - condition was met in 30ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=footer-site-map-link]&gt; text to equal: &quot;Site Map&quot; - condition was met in 29ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=footer-about-us-link]&gt; text to equal: &quot;About Us&quot; - condition was met in 30ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=footer-employment-link]&gt; text to equal: &quot;Employment&quot; - condition was met in 28ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=footer-ads-link]&gt; text to equal: &quot;Interest-Based Ads&quot; - condition was met in 30ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=footer-advertise-link]&gt; text to equal: &quot;Advertise&quot; - condition was met in 29ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=footer-privacy-link]&gt; text to equal: &quot;Privacy Policy&quot; - condition was met in 30ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=footer-terms-link]&gt; text to equal: &quot;Terms of Service&quot; - condition was met in 28ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=footer-contact-link]&gt; text to equal: &quot;Contact Us&quot; - condition was met in 28ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=footer-scams-link]&gt; text to equal: &quot;Avoid Scams&quot; - condition was met in 29ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=property-manager-login]&gt; text to equal: &quot;Property Manager Login&quot; - condition was met in 29ms</div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="package success">
+        <h2 class="name">&#10003; large/static/luxury</h2>
+        <div class="suites">
+          <div class="suite success">
+            <h3 class="name">Validate URL</h3>
+            <ul class="testcases">
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Element &lt;#react-view&gt; was visible after 30 milliseconds.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the URL equals &quot;http://localhost:9450/luxury-apartments-for-rent/&quot;.</div>
+              </li>
+            </ul>
+          </div>
+          <div class="suite success">
+            <h3 class="name">Validate header</h3>
+            <ul class="testcases">
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=ag-logo]&gt; to have attribute &quot;href&quot; equal: &quot;http://localhost:9450/&quot; - condition was met in 29ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=logo],Element[name=@image]&gt; to be present - element was present in 19ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=mainNavigation],Element[name=@findApartmentsMenu]&gt; text to match: &quot;/Find Apartments/&quot; - condition was met in 64ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=mainNavigation],Element[name=@blogLink]&gt; text to equal: &quot;Blog&quot; - condition was met in 37ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=mainNavigation],Element[name=@getOurAppLink]&gt; text to equal: &quot;Get Our App&quot; - condition was met in 51ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=mainNavigation],Element[name=@nextStepsMenu]&gt; text to equal: &quot;Next Steps&quot; - condition was met in 116ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=mainNavigation],Element[name=@advertiseLink]&gt; text to equal: &quot;Advertise Your Property&quot; - condition was met in 64ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=utilityNavigation],Element[name=@myPlacesLink]&gt; text to equal: &quot;My Places&quot; - condition was met in 78ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=utilityNavigation],Element[name=@registerLink]&gt; text to equal: &quot;Register&quot; - condition was met in 38ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=utilityNavigation],Element[name=@logInLink]&gt; text to equal: &quot;Log In&quot; - condition was met in 35ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=searchBar],Element[name=@textInput]&gt; to have attribute &quot;placeholder&quot; equal: &quot;Neighborhood, Zip or City&quot; - condition was met in 36ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=searchBar],Element[name=@bedsDropdown]&gt; text to equal: &quot;BEDS&quot; - condition was met in 39ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=searchBar],Element[name=@priceDropdown]&gt; text to equal: &quot;PRICE&quot; - condition was met in 50ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=searchBar],Element[name=@searchButton]&gt; text to equal: &quot;Search Apartments&quot; - condition was met in 38ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=searchBar],Element[name=@mapListViewToggle]&gt; to not be present - element was not found in 20ms.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=breadcrumbs],Element[name=@root]&gt; text to equal: &quot;Home&quot; - condition was met in 45ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=breadcrumbs],Element[name=@root]&gt; to have attribute &quot;href&quot; equal: &quot;http://localhost:9450/&quot; - condition was met in 22ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=breadcrumbs],Element[name=@currentPage]&gt; text to equal: &quot;Luxury Apartments&quot; - condition was met in 38ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=breadcrumbs],Element[name=@currentPage]&gt; to not have attribute &quot;href&quot;</div>
+              </li>
+            </ul>
+          </div>
+          <div class="suite success">
+            <h3 class="name">Validate page content</h3>
+            <ul class="testcases">
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the element text exists.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the element text exists.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the element text exists.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the link href matches /apartments\/.*\/luxury-apartments-for-rent-4l9/.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the link href matches /apartments\/.*\/luxury-apartments-for-rent-4l9/.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the link href matches /apartments\/.*\/luxury-apartments-for-rent-4l9/.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the link href matches /apartments\/.*\/luxury-apartments-for-rent-4l9/.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the link href matches /apartments\/.*\/luxury-apartments-for-rent-4l9/.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the link href matches /apartments\/.*\/luxury-apartments-for-rent-4l9/.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the link href matches /apartments\/.*\/luxury-apartments-for-rent-4l9/.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the link href matches /apartments\/.*\/luxury-apartments-for-rent-4l9/.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the link href matches /apartments\/.*\/luxury-apartments-for-rent-4l9/.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the link href matches /apartments\/.*\/luxury-apartments-for-rent-4l9/.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the link href matches /apartments\/.*\/luxury-apartments-for-rent-4l9/.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the link href matches /apartments\/.*\/luxury-apartments-for-rent-4l9/.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the link href matches /apartments\/.*\/luxury-apartments-for-rent-4l9/.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the link href matches /apartments\/.*\/luxury-apartments-for-rent-4l9/.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the link href matches /apartments\/.*\/luxury-apartments-for-rent-4l9/.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the link href matches /apartments\/.*\/luxury-apartments-for-rent-4l9/.</div>
+              </li>
+            </ul>
+          </div>
+          <div class="suite success">
+            <h3 class="name">Validate footer</h3>
+            <ul class="testcases">
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=footer-blog-link]&gt; text to equal: &quot;AG Blog&quot; - condition was met in 31ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=footer-mobile-apps-link]&gt; text to equal: &quot;Mobile Apps&quot; - condition was met in 29ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=footer-site-map-link]&gt; text to equal: &quot;Site Map&quot; - condition was met in 30ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=footer-about-us-link]&gt; text to equal: &quot;About Us&quot; - condition was met in 29ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=footer-employment-link]&gt; text to equal: &quot;Employment&quot; - condition was met in 31ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=footer-ads-link]&gt; text to equal: &quot;Interest-Based Ads&quot; - condition was met in 28ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=footer-advertise-link]&gt; text to equal: &quot;Advertise&quot; - condition was met in 29ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=footer-privacy-link]&gt; text to equal: &quot;Privacy Policy&quot; - condition was met in 29ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=footer-terms-link]&gt; text to equal: &quot;Terms of Service&quot; - condition was met in 29ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=footer-contact-link]&gt; text to equal: &quot;Contact Us&quot; - condition was met in 29ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=footer-scams-link]&gt; text to equal: &quot;Avoid Scams&quot; - condition was met in 29ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=property-manager-login]&gt; text to equal: &quot;Property Manager Login&quot; - condition was met in 30ms</div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="package success">
+        <h2 class="name">&#10003; large/static/militaryLander</h2>
+        <div class="suites">
+          <div class="suite success">
+            <h3 class="name">Validate URL</h3>
+            <ul class="testcases">
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Element &lt;#react-view&gt; was visible after 30 milliseconds.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the URL equals &quot;http://localhost:9450/military/&quot;.</div>
+              </li>
+            </ul>
+          </div>
+          <div class="suite success">
+            <h3 class="name">Validate header</h3>
+            <ul class="testcases">
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=ag-logo]&gt; to have attribute &quot;href&quot; equal: &quot;http://localhost:9450/&quot; - condition was met in 32ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=logo],Element[name=@image]&gt; to be present - element was present in 22ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=mainNavigation],Element[name=@findApartmentsMenu]&gt; text to match: &quot;/Find Apartments/&quot; - condition was met in 59ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=mainNavigation],Element[name=@blogLink]&gt; text to equal: &quot;Blog&quot; - condition was met in 53ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=mainNavigation],Element[name=@getOurAppLink]&gt; text to equal: &quot;Get Our App&quot; - condition was met in 80ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=mainNavigation],Element[name=@nextStepsMenu]&gt; text to equal: &quot;Next Steps&quot; - condition was met in 67ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=mainNavigation],Element[name=@advertiseLink]&gt; text to equal: &quot;Advertise Your Property&quot; - condition was met in 68ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=utilityNavigation],Element[name=@myPlacesLink]&gt; text to equal: &quot;My Places&quot; - condition was met in 66ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=utilityNavigation],Element[name=@registerLink]&gt; text to equal: &quot;Register&quot; - condition was met in 36ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=utilityNavigation],Element[name=@logInLink]&gt; text to equal: &quot;Log In&quot; - condition was met in 35ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=searchBar],Element[name=@textInput]&gt; to have attribute &quot;placeholder&quot; equal: &quot;Neighborhood, Zip or City&quot; - condition was met in 89ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=searchBar],Element[name=@bedsDropdown]&gt; text to equal: &quot;BEDS&quot; - condition was met in 36ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=searchBar],Element[name=@priceDropdown]&gt; text to equal: &quot;PRICE&quot; - condition was met in 40ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=searchBar],Element[name=@searchButton]&gt; text to equal: &quot;Search Apartments&quot; - condition was met in 38ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=searchBar],Element[name=@mapListViewToggle]&gt; to not be present - element was not found in 21ms.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=breadcrumbs],Element[name=@root]&gt; text to equal: &quot;Home&quot; - condition was met in 43ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=breadcrumbs],Element[name=@root]&gt; to have attribute &quot;href&quot; equal: &quot;http://localhost:9450/&quot; - condition was met in 24ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=breadcrumbs],Element[name=@currentPage]&gt; text to equal: &quot;Military&quot; - condition was met in 37ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=breadcrumbs],Element[name=@currentPage]&gt; to not have attribute &quot;href&quot;</div>
+              </li>
+            </ul>
+          </div>
+          <div class="suite success">
+            <h3 class="name">Validate page content</h3>
+            <ul class="testcases">
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the element text exists.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the element text exists.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the element text exists.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the element text exists.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the element text exists.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the link href matches /military\/.*\//.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the link href matches /military\/.*\//.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the link href matches /military\/.*\//.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the link href matches /military\/.*\//.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the link href matches /military\/.*\//.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the link href matches /military\/.*\//.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the link href matches /military\/.*\//.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the link href matches /military\/.*\//.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the link href matches /military\/.*\//.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the link href matches /military\/.*\//.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the link href matches /military\/.*\//.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the link href matches /military\/.*\//.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the link href matches /military\/.*\//.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the link href matches /military\/.*\//.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the link href matches /military\/.*\//.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the link href matches /military\/.*\//.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the link href matches /military\/.*\//.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the link href matches /military\/.*\//.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the link href matches /military\/.*\//.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the link href matches /military\/.*\//.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the link href matches /military\/.*\//.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the link href matches /military\/.*\//.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the link href matches /military\/.*\//.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the link href matches /military\/.*\//.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the link href matches /military\/.*\//.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the link href matches /military\/.*\//.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the link href matches /military\/.*\//.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the link href matches /military\/.*\//.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the link href matches /military\/.*\//.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the link href matches /military\/.*\//.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the link href matches /military\/.*\//.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the link href matches /military\/.*\//.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the link href matches /military\/.*\//.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the link href matches /military\/.*\//.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the link href matches /military\/.*\//.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the link href matches /military\/.*\//.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the link href matches /military\/.*\//.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the link href matches /military\/.*\//.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the link href matches /military\/.*\//.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the link href matches /military\/.*\//.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the link href matches /military\/.*\//.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the link href matches /military\/.*\//.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the link href matches /military\/.*\//.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the link href matches /military\/.*\//.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the link href matches /military\/.*\//.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the link href matches /military\/.*\//.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the link href matches /military\/.*\//.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the link href matches /military\/.*\//.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the link href matches /military\/.*\//.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the link href matches /military\/.*\//.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the link href matches /military\/.*\//.</div>
+              </li>
+            </ul>
+          </div>
+          <div class="suite success">
+            <h3 class="name">Validate footer</h3>
+            <ul class="testcases">
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=footer-blog-link]&gt; text to equal: &quot;AG Blog&quot; - condition was met in 29ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=footer-mobile-apps-link]&gt; text to equal: &quot;Mobile Apps&quot; - condition was met in 28ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=footer-site-map-link]&gt; text to equal: &quot;Site Map&quot; - condition was met in 39ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=footer-about-us-link]&gt; text to equal: &quot;About Us&quot; - condition was met in 29ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=footer-employment-link]&gt; text to equal: &quot;Employment&quot; - condition was met in 28ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=footer-ads-link]&gt; text to equal: &quot;Interest-Based Ads&quot; - condition was met in 29ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=footer-advertise-link]&gt; text to equal: &quot;Advertise&quot; - condition was met in 29ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=footer-privacy-link]&gt; text to equal: &quot;Privacy Policy&quot; - condition was met in 28ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=footer-terms-link]&gt; text to equal: &quot;Terms of Service&quot; - condition was met in 27ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=footer-contact-link]&gt; text to equal: &quot;Contact Us&quot; - condition was met in 29ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=footer-scams-link]&gt; text to equal: &quot;Avoid Scams&quot; - condition was met in 28ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=property-manager-login]&gt; text to equal: &quot;Property Manager Login&quot; - condition was met in 29ms</div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="package success">
+        <h2 class="name">&#10003; large/static/privacy</h2>
+        <div class="suites">
+          <div class="suite success">
+            <h3 class="name">Validate URL</h3>
+            <ul class="testcases">
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Element &lt;#react-view&gt; was visible after 29 milliseconds.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the URL equals &quot;http://localhost:9450/legal/privacy/&quot;.</div>
+              </li>
+            </ul>
+          </div>
+          <div class="suite success">
+            <h3 class="name">Validate header</h3>
+            <ul class="testcases">
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=ag-logo]&gt; to have attribute &quot;href&quot; equal: &quot;http://localhost:9450/&quot; - condition was met in 33ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=logo],Element[name=@image]&gt; to be present - element was present in 25ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=mainNavigation],Element[name=@findApartmentsMenu]&gt; text to match: &quot;/Find Apartments/&quot; - condition was met in 50ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=mainNavigation],Element[name=@blogLink]&gt; text to equal: &quot;Blog&quot; - condition was met in 54ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=mainNavigation],Element[name=@getOurAppLink]&gt; text to equal: &quot;Get Our App&quot; - condition was met in 46ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=mainNavigation],Element[name=@nextStepsMenu]&gt; text to equal: &quot;Next Steps&quot; - condition was met in 82ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=mainNavigation],Element[name=@advertiseLink]&gt; text to equal: &quot;Advertise Your Property&quot; - condition was met in 49ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=utilityNavigation],Element[name=@myPlacesLink]&gt; text to equal: &quot;My Places&quot; - condition was met in 85ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=utilityNavigation],Element[name=@registerLink]&gt; text to equal: &quot;Register&quot; - condition was met in 39ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=utilityNavigation],Element[name=@logInLink]&gt; text to equal: &quot;Log In&quot; - condition was met in 94ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=searchBar],Element[name=@textInput]&gt; to have attribute &quot;placeholder&quot; equal: &quot;Neighborhood, Zip or City&quot; - condition was met in 34ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=searchBar],Element[name=@bedsDropdown]&gt; text to equal: &quot;BEDS&quot; - condition was met in 35ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=searchBar],Element[name=@priceDropdown]&gt; text to equal: &quot;PRICE&quot; - condition was met in 35ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=searchBar],Element[name=@searchButton]&gt; text to equal: &quot;Search Apartments&quot; - condition was met in 34ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=searchBar],Element[name=@mapListViewToggle]&gt; to not be present - element was not found in 19ms.</div>
+              </li>
+            </ul>
+          </div>
+          <div class="suite success">
+            <h3 class="name">Validate page content</h3>
+            <ul class="testcases">
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the element text exists.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the element text exists.</div>
+              </li>
+            </ul>
+          </div>
+          <div class="suite success">
+            <h3 class="name">Validate footer</h3>
+            <ul class="testcases">
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=footer-blog-link]&gt; text to equal: &quot;AG Blog&quot; - condition was met in 30ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=footer-mobile-apps-link]&gt; text to equal: &quot;Mobile Apps&quot; - condition was met in 30ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=footer-site-map-link]&gt; text to equal: &quot;Site Map&quot; - condition was met in 29ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=footer-about-us-link]&gt; text to equal: &quot;About Us&quot; - condition was met in 30ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=footer-employment-link]&gt; text to equal: &quot;Employment&quot; - condition was met in 30ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=footer-ads-link]&gt; text to equal: &quot;Interest-Based Ads&quot; - condition was met in 29ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=footer-advertise-link]&gt; text to equal: &quot;Advertise&quot; - condition was met in 28ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=footer-privacy-link]&gt; text to equal: &quot;Privacy Policy&quot; - condition was met in 27ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=footer-terms-link]&gt; text to equal: &quot;Terms of Service&quot; - condition was met in 25ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=footer-contact-link]&gt; text to equal: &quot;Contact Us&quot; - condition was met in 34ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=footer-scams-link]&gt; text to equal: &quot;Avoid Scams&quot; - condition was met in 29ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=property-manager-login]&gt; text to equal: &quot;Property Manager Login&quot; - condition was met in 28ms</div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="package success">
+        <h2 class="name">&#10003; large/static/seniorLander</h2>
+        <div class="suites">
+          <div class="suite success">
+            <h3 class="name">Validate URL</h3>
+            <ul class="testcases">
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Element &lt;#react-view&gt; was visible after 43 milliseconds.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the URL equals &quot;http://localhost:9450/senior/&quot;.</div>
+              </li>
+            </ul>
+          </div>
+          <div class="suite success">
+            <h3 class="name">Validate header</h3>
+            <ul class="testcases">
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=ag-logo]&gt; to have attribute &quot;href&quot; equal: &quot;http://localhost:9450/&quot; - condition was met in 32ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=logo],Element[name=@image]&gt; to be present - element was present in 22ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=mainNavigation],Element[name=@findApartmentsMenu]&gt; text to match: &quot;/Find Apartments/&quot; - condition was met in 52ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=mainNavigation],Element[name=@blogLink]&gt; text to equal: &quot;Blog&quot; - condition was met in 34ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=mainNavigation],Element[name=@getOurAppLink]&gt; text to equal: &quot;Get Our App&quot; - condition was met in 85ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=mainNavigation],Element[name=@nextStepsMenu]&gt; text to equal: &quot;Next Steps&quot; - condition was met in 66ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=mainNavigation],Element[name=@advertiseLink]&gt; text to equal: &quot;Advertise Your Property&quot; - condition was met in 52ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=utilityNavigation],Element[name=@myPlacesLink]&gt; text to equal: &quot;My Places&quot; - condition was met in 84ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=utilityNavigation],Element[name=@registerLink]&gt; text to equal: &quot;Register&quot; - condition was met in 36ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=utilityNavigation],Element[name=@logInLink]&gt; text to equal: &quot;Log In&quot; - condition was met in 40ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=searchBar],Element[name=@textInput]&gt; to have attribute &quot;placeholder&quot; equal: &quot;Neighborhood, Zip or City&quot; - condition was met in 36ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=searchBar],Element[name=@bedsDropdown]&gt; text to equal: &quot;BEDS&quot; - condition was met in 46ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=searchBar],Element[name=@priceDropdown]&gt; text to equal: &quot;PRICE&quot; - condition was met in 37ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=searchBar],Element[name=@searchButton]&gt; text to equal: &quot;Search Apartments&quot; - condition was met in 37ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=searchBar],Element[name=@mapListViewToggle]&gt; to not be present - element was not found in 20ms.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=breadcrumbs],Element[name=@root]&gt; text to equal: &quot;Home&quot; - condition was met in 43ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=breadcrumbs],Element[name=@root]&gt; to have attribute &quot;href&quot; equal: &quot;http://localhost:9450/&quot; - condition was met in 22ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=breadcrumbs],Element[name=@currentPage]&gt; text to equal: &quot;Senior&quot; - condition was met in 35ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;Section[name=breadcrumbs],Element[name=@currentPage]&gt; to not have attribute &quot;href&quot;</div>
+              </li>
+            </ul>
+          </div>
+          <div class="suite success">
+            <h3 class="name">Validate page content</h3>
+            <ul class="testcases">
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the element text exists.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the element text exists.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the element text exists.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the element text exists.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=hero-image]&gt; to be present - element was present in 13ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the element text exists.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the link href matches /\/senior-living-4lf\//.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the link href matches /\/senior-living-4lf\//.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the link href matches /\/senior-living-4lf\//.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the link href matches /\/senior-living-4lf\//.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the link href matches /\/senior-living-4lf\//.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the link href matches /\/senior-living-4lf\//.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the link href matches /\/senior-living-4lf\//.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the link href matches /\/senior-living-4lf\//.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the link href matches /\/senior-living-4lf\//.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the link href matches /\/senior-living-4lf\//.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the link href matches /\/senior-living-4lf\//.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the link href matches /\/senior-living-4lf\//.</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Testing if the link href matches /\/senior-living-4lf\//.</div>
+              </li>
+            </ul>
+          </div>
+          <div class="suite success">
+            <h3 class="name">Validate footer</h3>
+            <ul class="testcases">
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=footer-blog-link]&gt; text to equal: &quot;AG Blog&quot; - condition was met in 29ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=footer-mobile-apps-link]&gt; text to equal: &quot;Mobile Apps&quot; - condition was met in 33ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=footer-site-map-link]&gt; text to equal: &quot;Site Map&quot; - condition was met in 29ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=footer-about-us-link]&gt; text to equal: &quot;About Us&quot; - condition was met in 28ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=footer-employment-link]&gt; text to equal: &quot;Employment&quot; - condition was met in 28ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=footer-ads-link]&gt; text to equal: &quot;Interest-Based Ads&quot; - condition was met in 30ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=footer-advertise-link]&gt; text to equal: &quot;Advertise&quot; - condition was met in 30ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=footer-privacy-link]&gt; text to equal: &quot;Privacy Policy&quot; - condition was met in 29ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=footer-terms-link]&gt; text to equal: &quot;Terms of Service&quot; - condition was met in 29ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=footer-contact-link]&gt; text to equal: &quot;Contact Us&quot; - condition was met in 29ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=footer-scams-link]&gt; text to equal: &quot;Avoid Scams&quot; - condition was met in 37ms</div>
+              </li>
+              <li class="testcase success">
+                <div class="status">&#10003;</div>
+                <div class="name">Expected element &lt;[data-test-id=property-manager-login]&gt; text to equal: &quot;Property Manager Login&quot; - condition was met in 28ms</div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

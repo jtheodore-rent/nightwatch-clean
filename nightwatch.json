@@ -1,0 +1,68 @@
+{
+  "src_folders" : ["tests"],
+  "output_folder" : "reports",
+  "custom_commands_path" : "tests/commands",
+  "custom_assertions_path" : "",
+  "page_objects_path" : "",
+  "globals_path" : "",
+
+  "selenium" : {
+    "start_process" : false,
+    "server_path" : "",
+    "log_path" : "",
+    "host" : "127.0.0.1",
+    "port" : 4444,
+    "cli_args" : {
+      "webdriver.chrome.driver" : "",
+      "webdriver.ie.driver" : ""
+    }
+  },
+
+  "test_workers" : {"enabled" : true, "workers" : "auto"},
+
+  "test_settings" : {
+    "default" : {
+      "launch_url" : "https://www.google.com/",
+      "selenium_port"  : 80,
+      "selenium_host"  : "ondemand.saucelabs.com",
+      "silent": true,
+      "screenshots" : {
+        "enabled" : false,
+        "path" : ""
+      },
+      "username" : "${SAUCE_USERNAME}",
+      "access_key" : "${SAUCE_ACCESS_KEY}",
+
+      "skip_testcases_on_fail": false,
+
+      "desiredCapabilities": {
+        "javascriptEnabled": true,
+        "acceptSslCerts": true
+      }
+    },
+
+    "android_s4_emulator": {
+      "desiredCapabilities" : {
+        "browserName" : "Android",
+        "appiumVersion" : "1.6.5",
+        "deviceName" : "Android Emulator",
+        "deviceOrientation" : "portrait",
+        "browserName" : "Chrome",
+        "platformVersion" : "6.0",
+        "mobileDeviceType": "android",
+        "platformName" : "Android"
+      }
+    },
+
+    "iphone_6_simulator": {
+      "desiredCapabilities": {
+        "browserName": "iPhone",
+        "deviceOrientation": "portrait",
+        "deviceName": "iPhone 6",
+        "platform": "OSX 10.10",
+        "version": "8.4"
+      }
+    }
+
+  }
+}
